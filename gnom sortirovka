@@ -1,8 +1,9 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void gnomesort(int N, vector <int> &A) {
-	int i = 0;
+void gnomesort( vector <int> &A) {
+    int N=A.size();
+    int i = 0;
 	int tmp;
 	 while (i < N) {
           if (i == 0 || A[i - 1] <= A[i])
@@ -15,6 +16,12 @@ void gnomesort(int N, vector <int> &A) {
          }
 	}
 }
+void outinconsole( vector <int> &A) {
+    int n=A.size();
+    for (int i=0; i < n; i++){  
+    cout << A[i]<<" ";
+    }
+}
 int main() {
  int n;
  cin >> n ;
@@ -22,9 +29,7 @@ int main() {
  for (int i=0; i < n; i++){ 
   cin >> a[i];
  }
-gnomesort(n,a);
-for (int i=0; i < n; i++){ 
-  cout << a[i]<<" ";
- }
+gnomesort(a);
+outinconsole( a);
 return 0;
 }
